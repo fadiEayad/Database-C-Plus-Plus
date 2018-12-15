@@ -1,0 +1,5 @@
+41231 John Lennon 04 14 1971 10 100000 Singer
+23192 Cheryl Abbott 10 31 1990 2 500000 Clown
+10559 Mike Gutierrez 02 19 1964 15 125821 Developer
+08823 Julian Munoz 08 17 1994 3 109000 Memer
+49512 Karl Walsh 07 26 1979 10 481822 Manager

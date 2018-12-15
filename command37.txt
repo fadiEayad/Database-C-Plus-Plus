@@ -1,0 +1,7 @@
+delete at beginning
+add at beginning
+10001 Anna Lawson 01 14 1956 23 1000001 Janitor
+add before 1
+10008 May Marshall 07 12 1987 14 41231 Doctor
+add after 1
+13337 Marko Jovanovic 04 24 1999 1 1333337 TA
