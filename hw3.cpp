@@ -1,5 +1,5 @@
 //Fadi Ayad
-//HW3: Database
+//Database
 
 #include <iostream>
 #include <fstream>
@@ -422,11 +422,7 @@ void linkedList::print(ofstream &file) {
 }
 
 
-int main(int argc, char* argv[]) {
-//	ArgumentManager am(argc, argv);
-//	string f1 = am.get("input");
-//	string f2 = am.get("command");
-//	string f3 = am.get("output");
+int main() {
 
 	ifstream infile;	// Creating instance
 	ifstream commandfile;	// Creating instance
