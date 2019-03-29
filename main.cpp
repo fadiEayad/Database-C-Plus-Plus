@@ -29,19 +29,19 @@ private:
 	node *head;
 	node *originalhead;
 public:
-	linkedList();
-	~linkedList();
-	void add(string id, string first, string last, string dob, int yearsWorked, int salary, string position);
-	void del(int index);
-	void delid(string id);
-	void delin(int index1, int index2);
-	void sort(string command);
+	linkedList();	//constructor
+	~linkedList();	//destructor
+	void add(string id, string first, string last, string dob, int yearsWorked, int salary, string position);	//add info
+	void del(int index);	//delete info from specific index
+	void delid(string id);	//delete info of specific id
+	void delin(int index1, int index2);	//delete info between two indices, inclusive
+	void sort(string command);	//sort info based on command (id, dob, firstname, lastname, yearsworked, salary, position)
 
-	void parse(ifstream &infile);
-	void print(ofstream &file);
+	void parse(ifstream &infile);	//parse info from input file
+	void print(ofstream &file);	//print info to output file
 
-	void parseline(string str, int index);
-	void addline(int index, string id, string first, string last, string dob, int yearsWorked, int salary, string position);
+	void parseline(string str, int index);	//parse line from input file
+	void addline(int index, string id, string first, string last, string dob, int yearsWorked, int salary, string position); //add line
 };
 
 linkedList::linkedList() {
@@ -284,15 +284,15 @@ void linkedList::sort(string command) {
 				cu = curr->id;
 				cunext = curr->next->id;
 			}
-			else if (command == "sort first name") {
+			else if (command == "sort first name") {	//if sorting by first name
 				cu = curr->firstname;
 				cunext = curr->next->firstname;
 			}
-			else if (command == "sort last name") {
+			else if (command == "sort last name") {	//if sorting by last name
 				cu = curr->lastname;
 				cunext = curr->next->lastname;
 			}
-			else if (command == "sort DOB") {
+			else if (command == "sort DOB") {	//if sorting by date of birth
 				cu = "";
 				cunext = "";
 				for (int x = 0; x < 4; x++) {
@@ -308,15 +308,15 @@ void linkedList::sort(string command) {
 					cunext += curr->next->dob[x + 3];
 				}
 			}
-			else if (command == "sort years worked") {
+			else if (command == "sort years worked") {	//if sorting by years worked
 				c = curr->yearsWorked;
 				cnext = curr->next->yearsWorked;
 			}
-			else if (command == "sort salary") {
+			else if (command == "sort salary") {	//if sorting by salary
 				c = curr->salary;
 				cnext = curr->next->salary;
 			}
-			else if (command == "sort position") {
+			else if (command == "sort position") {	//if sorting by position
 				cu = curr->position;
 				cunext = curr->next->position;
 			}
@@ -436,12 +436,12 @@ int main() {
 	linkedList obj;
 	string command = "";
 
-	if (!infile.is_open())
+	if (!infile.is_open())	//print out message if can't open input file
 	{
 		cout << "Couldn't open input file.";
 		return 0;
 	}
-	if (!commandfile.is_open())
+	if (!commandfile.is_open())	//print out message if can't open command file
 	{
 		cout << "Couldn't open sort file.";
 		return 0;
@@ -450,7 +450,7 @@ int main() {
 	obj.parse(infile);
 
 	int i = 0;
-	while (getline(commandfile, command)) {
+	while (getline(commandfile, command)) {	//reading command file
 		if (command.empty())
 			continue;
 		if (i > 0)
